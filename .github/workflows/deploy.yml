@@ -6,7 +6,7 @@ on:
 
 
 jobs:
-  post_approval_check:
+  post-approval-check:
     name: 'Post Approval Check'
     runs-on: ubuntu-latest
     
