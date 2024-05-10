@@ -22,7 +22,7 @@ jobs:
         shell: sh
 
       - name: Run Py file
-        run: python make_request.py
+        run: python devops/make_request.py
         shell: sh
     
 
