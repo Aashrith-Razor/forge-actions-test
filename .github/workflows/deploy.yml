@@ -24,6 +24,6 @@ jobs:
       - name: Post Test Success
         run: echo "Tests Succeeded"
 
-      - name: Auto Approve Pull Request
+      - name: Auto Merge PR
         uses: pascalgn/automerge-action@v0.16.3
         
