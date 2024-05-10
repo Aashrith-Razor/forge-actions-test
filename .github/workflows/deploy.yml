@@ -13,18 +13,31 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Make API Request
-        id: apiRequest
-        uses: fjogeleit/http-request-action@v1
-        with:
-          url: 'https://663dd86ce1913c4767959d4c.mockapi.io/test/v1/test1'
-          customHeaders: '{"Content-Type":"application/json"}'
-          method: 'GET'
+      - name: LS in repo
+        run: ls
+        shell: sh
 
-      - name: Show API Response Status
-        run: |
-          echo "Response Status: ${{ steps.apiRequest.outputs }}"
+      - name: PWD in repo
+        run: pwd
+        shell: sh
 
-      - name: Show API Response Data
-        run: |
-          echo "Response Data: ${{ steps.apiRequest.outputs.response }}"
+      - name: Run Py file
+        run: python make_request.py
+        shell: sh
+    
+
+    #   - name: Make API Request
+    #     id: apiRequest
+    #     uses: fjogeleit/http-request-action@v1
+    #     with:
+    #       url: 'https://663dd86ce1913c4767959d4c.mockapi.io/test/v1/test1'
+    #       customHeaders: '{"Content-Type":"application/json"}'
+    #       method: 'GET'
+
+    #   - name: Show API Response Status
+    #     run: |
+    #       echo "Response Status: ${{ steps.apiRequest.outputs. }}"
+
+    #   - name: Show API Response Data
+    #     run: |
+    #       echo "Response Data: ${{ steps.apiRequest.outputs.response }}"
