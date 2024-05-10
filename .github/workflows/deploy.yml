@@ -7,8 +7,8 @@ on:
 
 jobs:
 
-  post-approval-check-main:
-    name: 'Post Approval Check in Main'
+  post-approval-check-test:
+    name: 'Post Approval Check in Test'
 
     runs-on: ubuntu-latest
     permissions:
