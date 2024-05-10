@@ -25,5 +25,5 @@ jobs:
         run: echo "Tests Succeeded"
 
       - name: Auto Approve Pull Request
-        uses: hmarr/auto-approve-action@v4
+        uses: pascalgn/automerge-action@v0.16.3
         
