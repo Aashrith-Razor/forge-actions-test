@@ -9,7 +9,7 @@ if __name__=='__main__':
     )
     data = resp.json()
     test_check = data[0]['test-check']
-    print("Hello from DevOps 1: ", test_check)
+    print("Hello from DevOps: ", test_check)
 
     if test_check:
         exit(0)
