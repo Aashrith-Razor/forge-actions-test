@@ -6,8 +6,10 @@ on:
 
 
 jobs:
-  post-approval-check:
-    name: 'Post Approval Check'
+
+  post-approval-check-main:
+    name: 'Post Approval Check in Main'
+
     runs-on: ubuntu-latest
     
     if: ${{ github.event.review.state == 'approved' }}
