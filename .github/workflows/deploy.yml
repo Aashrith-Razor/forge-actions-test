@@ -11,6 +11,8 @@ jobs:
     name: 'Post Approval Check in Main'
 
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     
     if: ${{ github.event.review.state == 'approved' }}
     steps:
@@ -23,3 +25,7 @@ jobs:
 
       - name: Post Test Success
         run: echo "Tests Succeeded"
+
+      - name: Auto Approve Pull Request
+        uses: hmarr/auto-approve-action@v4
+        
