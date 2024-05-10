@@ -1,14 +1,16 @@
 name: Make API Request
 
 on:
-  push:
-    branches:
-      - main
+  pull_request_review:
+    types: [submitted]
+
 
 jobs:
-  make-api-request:
+  post-approval-check-main:
+    name: 'Post Approval Check in Main'
     runs-on: ubuntu-latest
-
+    
+    if: ${{ github.event.review.state == 'approved' }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
