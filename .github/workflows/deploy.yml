@@ -6,9 +6,11 @@ on:
 
 
 jobs:
-  make-api-request:
+  post_approval_check:
+    name: 'Post Approval Check'
     runs-on: ubuntu-latest
-
+    
+    if: ${{ github.event.review.state == 'approved' }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
