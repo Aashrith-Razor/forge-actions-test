@@ -15,7 +15,7 @@ jobs:
 
       - name: Make API Request
         id: api-request
-        uses: muhfaris/request-action@v1
+        uses: muhfaris/request-action@v2
         with:
           url: https://663dd86ce1913c4767959d4c.mockapi.io/test/v1/test1
           method: GET
